@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div#textBox
+    ul#boxList
+  input#textInput(
+    onkeypress = 'if(event.keyCode==13){chatMessage(); return false;}'
+  )
+  button#inputButton(
+    onclick = 'chatMessage()'
+  ) 작성
